@@ -13,17 +13,17 @@ from datetime import datetime
 async def ping(e):
     if e.sender_id in SUDO_USERS:
         start = datetime.now()
-        jarvis = await e.reply(f"ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞🫧")
+        jarvis = await e.reply(f"ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞⚠️")
         end = datetime.now()
         mp = (end - start).microseconds / 1000
-        await jarvis.edit(f"ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞🫧\n» `{mp} ᴍꜱ`")
+        await jarvis.edit(f"ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞⚠️\n» `{mp} ᴍꜱ`")
 
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%sreboot(?: |$)(.*)" % hl))
 @X2.on(events.NewMessage(incoming=True, pattern=r"\%sreboot(?: |$)(.*)" % hl))
 async def restart(e):
     if e.sender_id in SUDO_USERS:
-        await e.reply(f"`ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞🫧 𝗜𝗦 𝗦𝗧𝗔𝗥𝗧𝗜𝗡𝗚.`")
+        await e.reply(f"`ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞⚠️ 𝗜𝗦 𝗦𝗧𝗔𝗥𝗧𝗜𝗡𝗚.`")
         try:
             await X1.disconnect()
         except Exception:
@@ -75,7 +75,7 @@ async def addsudo(event):
         Heroku = heroku3.from_key(HEROKU_API_KEY)
         sudousers = getenv("SUDO_USERS", default=None)
 
-        ok = await event.reply(f"»ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞🫧 𝗡𝗘𝗪 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗔𝗗𝗗𝗘𝗗__")
+        ok = await event.reply(f"»ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞⚠️ 𝗡𝗘𝗪 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗔𝗗𝗗𝗘𝗗__")
         target = ""
         if HEROKU_APP_NAME is not None:
             app = Heroku.app(HEROKU_APP_NAME)
@@ -93,7 +93,7 @@ async def addsudo(event):
             return
 
         if str(target) in sudousers:
-            await ok.edit(f"ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞🫧 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥. !!")
+            await ok.edit(f"ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞⚠️ 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥. !!")
         else:
             if len(sudousers) > 0:
                 newsudo = f"{sudousers} {target}"
@@ -103,7 +103,7 @@ async def addsudo(event):
             heroku_var["SUDO_USERS"] = newsudo    
     
     elif event.sender_id in SUDO_USERS:
-        await event.reply("»ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞🫧 𝗢𝗪𝗡𝗘𝗥 𝗖𝗔𝗡 𝗚𝗜𝗩𝗘 𝗦𝗨𝗗𝗢...")
+        await event.reply("»ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞⚠️ 𝗢𝗪𝗡𝗘𝗥 𝗖𝗔𝗡 𝗚𝗜𝗩𝗘 𝗦𝗨𝗗𝗢...")
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%sremovesudo(?: |$)(.*)" % hl))
 @X2.on(events.NewMessage(incoming=True, pattern=r"\%sremovesudo(?: |$)(.*)" % hl))
@@ -140,9 +140,9 @@ async def removesudo(event):
 @X2.on(events.NewMessage(incoming=True, pattern=r"\%ssudos(?: |$)(.*)" % hl))
 async def show_sudo_users(event):
     if event.sender_id == OWNER_ID:
-        sudo_users_list = "ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞🫧 𝗖𝗨𝗥𝗥𝗘𝗡𝗧 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥𝗦 𝗟𝗜𝗦𝗧:\n"
+        sudo_users_list = "ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞⚠️ 𝗖𝗨𝗥𝗥𝗘𝗡𝗧 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥𝗦 𝗟𝗜𝗦𝗧:\n"
         for user_id in SUDO_USERS:
             sudo_users_list += f"- {user_id}\n"
         await event.reply(sudo_users_list)
     else:
-        await event.reply("🇴𝗡𝗟𝗬 𝗙𝗢𝗥 ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞🫧 𝗢𝗪𝗡𝗘𝗥.")
+        await event.reply("🇴𝗡𝗟𝗬 𝗙𝗢𝗥 ℕ𝕠𝕧𝕒 ꭙ 𝕊𝕡𝕒𝕞⚠️ 𝗢𝗪𝗡𝗘𝗥.")
