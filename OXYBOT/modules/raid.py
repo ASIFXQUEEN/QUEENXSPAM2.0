@@ -4,7 +4,7 @@ from random import choice
 
 from telethon import events
 
-from config import X1, X2, X3, X4, X5, X6, X7, X8, X9, X10, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
+from config import X1, X2, SUDO_USERS, OWNER_ID, CMD_HNDLR as hl
 from OXYBOT.data import RAID, REPLYRAID, OXYGEN
 
 
@@ -13,14 +13,6 @@ REPLY_RAID = []
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
 @X2.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
-@X3.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
-@X4.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
-@X5.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
-@X6.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
-@X7.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
-@X8.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
-@X9.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
-@X10.on(events.NewMessage(incoming=True, pattern=r"\%sraid(?: |$)(.*)" % hl))
 async def raid(e):
     if e.sender_id in SUDO_USERS:
         xraid = e.text.split(" ", 2)
@@ -36,7 +28,7 @@ async def raid(e):
 
         try:
             if uid in OXYGEN:
-                await e.reply("REPO OWNER HAI YE.")
+                await e.reply("BETA TUMHARA PAPA HAI YE.")
             elif uid == OWNER_ID:
                 await e.reply("BETA BAAP PE RAID NHI KRTE HAI...")
             elif uid in SUDO_USERS:
@@ -58,14 +50,6 @@ async def raid(e):
 
 @X1.on(events.NewMessage(incoming=True))
 @X2.on(events.NewMessage(incoming=True))
-@X3.on(events.NewMessage(incoming=True))
-@X4.on(events.NewMessage(incoming=True))
-@X5.on(events.NewMessage(incoming=True))
-@X6.on(events.NewMessage(incoming=True))
-@X7.on(events.NewMessage(incoming=True))
-@X8.on(events.NewMessage(incoming=True))
-@X9.on(events.NewMessage(incoming=True))
-@X10.on(events.NewMessage(incoming=True))
 async def _(event):
     global REPLY_RAID
     check = f"{event.sender_id}_{event.chat_id}"
@@ -79,15 +63,7 @@ async def _(event):
 
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))
-@X2.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))
-@X3.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))
-@X4.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))
-@X5.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))
-@X6.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))
-@X7.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))
-@X8.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))
-@X9.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))
-@X10.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl))
+@X2.on(events.NewMessage(incoming=True, pattern=r"\%srraid(?: |$)(.*)" % hl)) 
 async def rraid(e):
     if e.sender_id in SUDO_USERS:
         mkrr = e.text.split(" ", 1)
@@ -111,21 +87,13 @@ async def rraid(e):
                 check = f"{user_id}_{e.chat_id}"
                 if check not in REPLY_RAID:
                     REPLY_RAID.append(check)
-                await e.reply("» LAG GYA REPLY RAID.. !! ✅")
+                await e.reply("» LAG GYA REPLY RAID.AB PADEGI GALI MADARCHOD KO. !! ✅")
         except NameError:
             await e.reply(f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲: 𝐑𝐞𝐩𝐥𝐲𝐑𝐚𝐢𝐝\n  » {hl}rraid <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n  » {hl}rraid <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
 
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
 @X2.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
-@X3.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
-@X4.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
-@X5.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
-@X6.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
-@X7.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
-@X8.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
-@X9.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
-@X10.on(events.NewMessage(incoming=True, pattern=r"\%sdrraid(?: |$)(.*)" % hl))
 async def drraid(e):
     if e.sender_id in SUDO_USERS:
         text = e.text.split(" ", 1)
@@ -141,6 +109,6 @@ async def drraid(e):
             global REPLY_RAID
             if check in REPLY_RAID:
                 REPLY_RAID.remove(check)
-            await e.reply("» HAT GYA REPLY RAID !! ✅")
+            await e.reply("» HAT GYA REPLY RAID !!. AB NAHI PADEGI GALI. ✅")
         except NameError:
             await e.reply(f"𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲: 𝐃𝐑𝐞𝐩𝐥𝐲𝐑𝐚𝐢𝐝\n  » {hl}drraid <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ>\n  » {hl}drraid <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
