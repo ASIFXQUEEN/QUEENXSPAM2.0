@@ -1,5 +1,5 @@
 {
-    "name": "˹𝕆𝕩𝕪𝕘𝕖𝕟 ꭙ 𝕊𝕡𝕒𝕞˼🫧",
+    "name": "˹Queen ꭙ 𝕊𝕡𝕒𝕞˼🫧",
     "logo": "https://telegra.ph/file/6c32d6bff1244f0972640.jpg",
     "keywords": [
         "telegram",
@@ -8,7 +8,7 @@
         "PythonX",
         "SpamBots"
     ],
-    "repository": "https://github.com/Shubhxspam/SPAMBOT",
+    "repository": "https://github.com/ASIFXQUEEN/QUEENXSPAM2.0",
     "env": {
       "BOT_TOKEN": {
         "description": "Telegram Bot Token Get This value from https://t.me/BotFather",
