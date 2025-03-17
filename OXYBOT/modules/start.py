@@ -8,11 +8,11 @@ START_BUTTON = [
         Button.inline("★𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦★", data="help_back")
     ],
     [
-        Button.url("★𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥★", "https://t.me/Demonxcoder"),
-        Button.url("★𝗦𝗨𝗣𝗣𝗢𝗥𝗧★", "https://t.me/Mrshubh_1227")
+        Button.url("★𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥★", "tg://openmessage?user_id=5099049612"),
+        Button.url("★𝗦𝗨𝗣𝗣𝗢𝗥𝗧★", "https://t.me/ARAME9")
     ],
     [
-        Button.url("★𝗠𝗢𝗩𝗜𝗘𝗦★", "https://t.me/MoviesWDs_bot")
+        Button.url("★𝗡𝗔𝗩𝗘𝗘𝗡★", "https://t.me/mr_naveen720")
     ]
 ]
 
@@ -27,7 +27,7 @@ async def start(event):
         TEXT = f"**ʜᴇʏ [{event.sender.first_name}](tg://user?id={event.sender.id}),\n\nɪ ᴀᴍ [{bot_name}](tg://user?id={bot_id})**\n"
         await event.client.send_file(
             event.chat_id,
-            "https://graph.org/file/db0fbc02a08c2a28349f1-3671ff24b68aa73e82.jpg",
+            "https://envs.sh/wpl.jpg",
             caption=TEXT,
             buttons=START_BUTTON
         )
